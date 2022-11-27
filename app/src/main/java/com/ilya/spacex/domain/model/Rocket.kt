@@ -10,5 +10,5 @@ data class Rocket(
     val country: String,
     val costLaunch: Int,
     val firstStage: RocketFirstStage,
-    val stage: RocketSecondStage
+    val secondStage: RocketSecondStage
 )

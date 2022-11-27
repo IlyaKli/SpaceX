@@ -46,10 +46,10 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.9"
-                        android:text="Falcon Heavy"
                         android:textColor="@color/white"
                         android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:text="Falcon Heavy" />
 
                     <ImageView
                         android:layout_width="0dp"
@@ -86,14 +86,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/rocketHeightTextView"
+                                    android:id="@+id/rocketHeightValueTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
-                                    android:text="229,6"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/white"
+                                    tools:text="229,6" />
 
                                 <TextView
+                                    android:id="@+id/rocketHeightTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/rocket_height" />
@@ -116,14 +117,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/rocketDiameterTextView"
+                                    android:id="@+id/rocketDiameterValueTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
-                                    android:text="39.9"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/white"
+                                    tools:text="39.9" />
 
                                 <TextView
+                                    android:id="@+id/rocketDiameterTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/rocket_diameter" />
@@ -146,13 +148,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/rocketMassValueTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
-                                    android:text="3,125,735"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/white"
+                                    tools:text="3,125,735" />
 
                                 <TextView
+                                    android:id="@+id/rocketMassTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/rocket_weight" />
@@ -175,13 +179,15 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/rocketPayloadValueTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:gravity="center"
-                                    android:text="140.660"
-                                    android:textColor="@color/white" />
+                                    android:textColor="@color/white"
+                                    tools:text="140.660" />
 
                                 <TextView
+                                    android:id="@+id/rocketPayloadTextView"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/rocket_load" />
@@ -210,13 +216,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
-                        android:id="@+id/firstStartTextView"
+                        android:id="@+id/firstFlightTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="7 февраля, 2018"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="7 февраля, 2018" />
 
                 </LinearLayout>
 
@@ -236,12 +242,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/countryTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="США"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="США" />
 
                 </LinearLayout>
 
@@ -261,12 +268,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/costLaunchTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="$90 млн"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="$90 млн" />
 
                 </LinearLayout>
 
@@ -297,12 +305,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/engineCountTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="27"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="27" />
 
                 </LinearLayout>
 
@@ -322,12 +331,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/fuelCountTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="308,6"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="308,6" />
 
                 </LinearLayout>
 
@@ -347,12 +357,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/burnTimeTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="593"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="593" />
 
                 </LinearLayout>
 
@@ -383,12 +394,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/engineCountSecondTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="1"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="57" />
 
                 </LinearLayout>
 
@@ -408,12 +420,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/fuelCountSecondTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="243,2"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="243,2" />
 
                 </LinearLayout>
 
@@ -433,12 +446,13 @@
                         android:textColor="@color/white" />
 
                     <TextView
+                        android:id="@+id/burnTimeSecondTextView"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
                         android:gravity="end"
-                        android:text="397"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        tools:text="397" />
 
                 </LinearLayout>
 
