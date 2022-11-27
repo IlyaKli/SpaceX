@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SpaceX</string>
+    <string name="first_start">Первый запуск</string>
+    <string name="rocket_height">Высота, %</string>
+    <string name="rocket_diameter">Диаметр, %</string>
+    <string name="rocket_weight">Масса, %</string>
+    <string name="rocket_load">Нагрузка, %</string>
+    <string name="country">Страна</string>
+    <string name="launch_cost">Стоимость запуска</string>
+    <string name="rocket_first_stage">Первая ступень</string>
+    <string name="number_of_rocket_engines">Количество двигателей</string>
+    <string name="fuel_quantity">Количество топлива</string>
+    <string name="burn_time">Время сгорания</string>
+    <string name="rocket_second_stage">Вторая ступень</string>
+    <string name="watch_rocket_launches">Посмотреть запуски</string>
+</resources>
