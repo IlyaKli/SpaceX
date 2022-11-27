@@ -1,6 +1,6 @@
 package com.ilya.spacex.data.network.model.rocket
 
-class RocketDto(
+data class RocketDto(
     val name: String,
     val height: RocketHeightDto,
     val diameter: RocketDiameterDto,
@@ -10,5 +10,5 @@ class RocketDto(
     val country: String,
     val costLaunch: Int,
     val firstStage: RocketFirstStageDto,
-    val stage: RocketSecondStageDto
+    val secondStage: RocketSecondStageDto
 )

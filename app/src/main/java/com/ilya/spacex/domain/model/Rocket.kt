@@ -1,6 +1,6 @@
 package com.ilya.spacex.domain.model
 
-class Rocket(
+data class Rocket(
     val name: String,
     val height: RocketHeight,
     val diameter: RocketDiameter,
