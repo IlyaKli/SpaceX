@@ -8,7 +8,7 @@ class Rocket(
     val payloadWeight: RocketPayloadWeight,
     val firstFlight: String,
     val country: String,
-    val costLaunch: String,
+    val costLaunch: Int,
     val firstStage: RocketFirstStage,
     val stage: RocketSecondStage
 )

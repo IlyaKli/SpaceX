@@ -1,4 +1,6 @@
 package com.ilya.spacex.data.network.model.rocket
 
-class RocketHeightDto {
-}
+class RocketHeightDto(
+    val meters: Double,
+    val feet: Double
+)

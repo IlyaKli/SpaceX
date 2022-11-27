@@ -1,4 +1,3 @@
 package com.ilya.spacex.data.network.model.rocket
 
-class RocketResponseDto {
-}
+class RocketResponseDto(val rocketList: List<RocketDto>)
