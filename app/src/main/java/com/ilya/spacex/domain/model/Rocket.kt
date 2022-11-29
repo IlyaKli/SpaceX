@@ -1,14 +1,25 @@
 package com.ilya.spacex.domain.model
 
-class Rocket(
+data class Rocket(
     val name: String,
+
     val height: RocketHeight,
+
     val diameter: RocketDiameter,
+
     val mass: RocketMass,
-    val payloadWeight: RocketPayloadWeight,
+
+    val payloadWeight: List<RocketPayloadWeight>,
+
+    val rocketImages: List<String>,
+
     val firstFlight: String,
+
     val country: String,
-    val costLaunch: String,
+
+    val costLaunch: Int,
+
     val firstStage: RocketFirstStage,
-    val stage: RocketSecondStage
+
+    val secondStage: RocketSecondStage
 )

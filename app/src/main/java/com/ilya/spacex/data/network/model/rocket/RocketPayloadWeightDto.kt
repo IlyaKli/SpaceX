@@ -1,4 +1,11 @@
 package com.ilya.spacex.data.network.model.rocket
 
-class RocketPayloadWeightDto {
-}
+import com.google.gson.annotations.SerializedName
+
+class RocketPayloadWeightDto(
+    @SerializedName("kg")
+    val kilograms: Int,
+
+    @SerializedName("lb")
+    val pounds: Int
+)
