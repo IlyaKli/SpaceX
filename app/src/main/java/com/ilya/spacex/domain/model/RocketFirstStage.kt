@@ -1,7 +1,12 @@
 package com.ilya.spacex.domain.model
 
+import com.google.gson.annotations.SerializedName
+
 class RocketFirstStage(
-    val engines: Int,
-    val fuel_amount_tons: Double,
-    val burn_time_sec: Int
+
+    val engineCount: Int,
+
+    val fuelAmount: Double,
+
+    val burnTime: Int
 )

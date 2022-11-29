@@ -15,8 +15,11 @@ data class RocketDto(
     @SerializedName("mass")
     val mass: RocketMassDto,
 
-    @SerializedName("name")
-    val payloadWeight: RocketPayloadWeightDto,
+    @SerializedName("payload_weights")
+    val payloadWeight: List<RocketPayloadWeightDto>,
+
+    @SerializedName("flickr_images")
+    val rocketImages: List<String>,
 
     @SerializedName("first_flight")
     val firstFlight: String,

@@ -5,11 +5,7 @@ import com.ilya.spacex.domain.model.*
 
 class RocketMapper {
 
-    fun mapRocketResponseDtoToEntity(dto: RocketResponseDto) = RocketResponse(
-        mapRocketResponseDtoListToEntity(dto.rocketList)
-    )
-
-    private fun mapRocketResponseDtoListToEntity(list: List<RocketDto>): List<Rocket> {
+    fun mapRocketListDtoToEntity(list: List<RocketDto>): List<Rocket> {
         return list.map {
             mapRocketDtoToEntity(it)
         }
@@ -20,12 +16,13 @@ class RocketMapper {
         height = mapRocketHeightDtoToEntity(dto.height),
         diameter = mapRocketDiameterDtoToEntity(dto.diameter),
         mass = mapRocketMassDtoToEntity(dto.mass),
-        payloadWeight = mapRocketPayloadWeightDtoToEntity(dto.payloadWeight),
+        payloadWeight = mapPayloadWeightListDtoToEntity(dto.payloadWeight),
         firstFlight = dto.firstFlight,
         country = dto.country,
         costLaunch = dto.costLaunch,
         firstStage = mapRocketFirstStageDtoToEntity(dto.firstStage),
-        secondStage = mapRocketSecondStageDtoToEntity(dto.secondStage)
+        secondStage = mapRocketSecondStageDtoToEntity(dto.secondStage),
+        rocketImages = dto.rocketImages
     )
 
     private fun mapRocketHeightDtoToEntity(dto: RocketHeightDto) = RocketHeight(
@@ -43,21 +40,26 @@ class RocketMapper {
         pounds = dto.pounds
     )
 
+    private fun mapPayloadWeightListDtoToEntity(list: List<RocketPayloadWeightDto>): List<RocketPayloadWeight> {
+        return list.map {
+            mapRocketPayloadWeightDtoToEntity(it)
+        }
+    }
+
     private fun mapRocketPayloadWeightDtoToEntity(dto: RocketPayloadWeightDto) = RocketPayloadWeight(
         kilograms = dto.kilograms,
         pounds = dto.pounds
     )
 
     private fun mapRocketFirstStageDtoToEntity(dto: RocketFirstStageDto) = RocketFirstStage(
-        engines = dto.engines,
-        fuel_amount_tons = dto.fuel_amount_tons,
-        burn_time_sec = dto.burn_time_sec
+        engineCount = dto.engineCount,
+        fuelAmount = dto.fuelAmount,
+        burnTime = dto.burnTime
     )
 
     private fun mapRocketSecondStageDtoToEntity(dto: RocketSecondStageDto) = RocketSecondStage(
-        engines = dto.engines,
-        fuel_amount_tons = dto.fuel_amount_tons,
-        burn_time_sec = dto.burn_time_sec
+        engineCount = dto.engineCount,
+        fuelAmount = dto.fuelAmount,
+        burnTime = dto.burnTime
     )
-
 }

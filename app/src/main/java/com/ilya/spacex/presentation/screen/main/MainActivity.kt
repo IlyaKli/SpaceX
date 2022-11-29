@@ -21,7 +21,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.mainViewPager.adapter = adapter
-        val v = viewModel
+        viewModel.rockets.observe(this) {
+            adapter.rockets = it
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        viewModel.rockets.observe(this) {
 //            adapter.rockets = it.rocketList
 //        }
@@ -43,5 +75,3 @@ class MainActivity : AppCompatActivity() {
 //        }
 //
 //        adapter.rockets = rockets
-    }
-}

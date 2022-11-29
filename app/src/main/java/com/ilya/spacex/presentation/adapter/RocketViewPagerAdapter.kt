@@ -4,6 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.ilya.spacex.data.network.model.rocket.RocketDto
 import com.ilya.spacex.databinding.RocketItemBinding
 import com.ilya.spacex.domain.model.Rocket
 
@@ -28,7 +30,9 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
         val rocket = rockets[position]
         with (holder.binding) {
             with (rocket) {
-//                rocketImageView.setImageResource()
+                Glide.with(holder.binding.rocketImageView)
+                    .load(rocket.rocketImages[0])
+                    .into(holder.binding.rocketImageView)
                 rocketNameTextView.text = name
                 rocketHeightValueTextView.text = height.meters.toString()
 //                rocketHeightTextView.text =
@@ -36,17 +40,17 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
 //                rocketDiameterTextView.text =
                 rocketMassValueTextView.text = mass.kilograms.toString()
 //                rocketMassTextView.text =
-                rocketPayloadValueTextView.text = mass.kilograms.toString()
+                rocketPayloadValueTextView.text = payloadWeight[0].kilograms.toString()
 //                rocketPayloadTextView.text =
                 firstFlightTextView.text = firstFlight
                 countryTextView.text = country
                 costLaunchTextView.text = costLaunch.toString()
-                engineCountTextView.text = firstStage.engines.toString()
-                fuelCountTextView.text = firstStage.fuel_amount_tons.toString()
-                burnTimeTextView.text = firstStage.burn_time_sec.toString()
-                engineCountSecondTextView.text = secondStage.engines.toString()
-                fuelCountSecondTextView.text = secondStage.fuel_amount_tons.toString()
-                burnTimeSecondTextView.text = secondStage.burn_time_sec.toString()
+                engineCountTextView.text = firstStage.engineCount.toString()
+                fuelCountTextView.text = firstStage.fuelAmount.toString()
+                burnTimeTextView.text = firstStage.burnTime.toString()
+                engineCountSecondTextView.text = secondStage.engineCount.toString()
+                fuelCountSecondTextView.text = secondStage.fuelAmount.toString()
+                burnTimeSecondTextView.text = secondStage.burnTime.toString()
             }
         }
     }
