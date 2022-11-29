@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">SpaceX</string>
     <string name="first_start">Первый запуск</string>
-    <string name="rocket_height">Высота, %</string>
-    <string name="rocket_diameter">Диаметр, %</string>
-    <string name="rocket_weight">Масса, %</string>
-    <string name="rocket_load">Нагрузка, %</string>
+    <string name="rocket_height">Высота, %s</string>
+    <string name="rocket_diameter">Диаметр, %s</string>
+    <string name="rocket_weight">Масса, %s</string>
+    <string name="rocket_load">Нагрузка, %s</string>
     <string name="country">Страна</string>
     <string name="launch_cost">Стоимость запуска</string>
     <string name="rocket_first_stage">Первая ступень</string>

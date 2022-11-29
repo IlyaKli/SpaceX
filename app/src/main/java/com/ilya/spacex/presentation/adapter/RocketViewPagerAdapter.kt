@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.ilya.spacex.R
 import com.ilya.spacex.data.network.model.rocket.RocketDto
 import com.ilya.spacex.databinding.RocketItemBinding
 import com.ilya.spacex.domain.model.Rocket
@@ -35,13 +36,13 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
                     .into(holder.binding.rocketImageView)
                 rocketNameTextView.text = name
                 rocketHeightValueTextView.text = height.meters.toString()
-//                rocketHeightTextView.text =
+                rocketHeightTextView.text = String.format(context.getString(R.string.rocket_height), "m")
                 rocketDiameterValueTextView.text = diameter.meters.toString()
-//                rocketDiameterTextView.text =
+                rocketDiameterTextView.text = String.format(context.getString(R.string.rocket_diameter), "m")
                 rocketMassValueTextView.text = mass.kilograms.toString()
-//                rocketMassTextView.text =
+                rocketMassTextView.text = String.format(context.getString(R.string.rocket_weight), "кг")
                 rocketPayloadValueTextView.text = payloadWeight[0].kilograms.toString()
-//                rocketPayloadTextView.text =
+                rocketPayloadTextView.text = String.format(context.getString(R.string.rocket_load), "кг")
                 firstFlightTextView.text = firstFlight
                 countryTextView.text = country
                 costLaunchTextView.text = costLaunch.toString()

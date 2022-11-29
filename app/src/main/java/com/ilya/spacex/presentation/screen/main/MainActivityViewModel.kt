@@ -1,29 +1,40 @@
 package com.ilya.spacex.presentation.screen.main
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ilya.spacex.data.network.model.rocket.RocketDto
 import com.ilya.spacex.data.repository.RocketRepositoryImpl
 import com.ilya.spacex.domain.model.Rocket
 import com.ilya.spacex.domain.usecase.LoadRocketInfoUseCase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class MainActivityViewModel() : ViewModel() {
 
-    val repository = RocketRepositoryImpl()
+    private val repository = RocketRepositoryImpl()
 
-    var rockets = MutableLiveData<List<Rocket>>()
+    private val loadRocketInfoUseCase = LoadRocketInfoUseCase(repository)
 
-    val loadRocketInfoUseCase = LoadRocketInfoUseCase(repository)
+    private val _rockets = MutableLiveData<List<Rocket>>()
+    val rockets: LiveData<List<Rocket>>
+        get() = _rockets
+
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean>
+        get() = _isLoading
 
     init {
         loadRocketInfo()
+
     }
 
-    fun loadRocketInfo() {
+    private fun loadRocketInfo() {
         viewModelScope.launch {
-            rockets.value = loadRocketInfoUseCase()
+            _rockets.value = loadRocketInfoUseCase()
+            withContext(Dispatchers.Main) {
+            }
         }
     }
 }

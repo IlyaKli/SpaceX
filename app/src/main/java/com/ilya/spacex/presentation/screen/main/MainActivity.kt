@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProvider
-import com.ilya.spacex.data.repository.RocketRepositoryImpl
 import com.ilya.spacex.databinding.ActivityMainBinding
-import com.ilya.spacex.domain.model.*
-import com.ilya.spacex.domain.usecase.LoadRocketInfoUseCase
 import com.ilya.spacex.presentation.adapter.RocketViewPagerAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding.mainViewPager.adapter = adapter
         viewModel.rockets.observe(this) {
             adapter.rockets = it
+        }
+        viewModel.isLoading.observe(this) {
         }
 
     }
