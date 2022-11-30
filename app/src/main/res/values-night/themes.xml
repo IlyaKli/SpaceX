@@ -13,4 +13,8 @@
         <item name="android:windowTranslucentStatus">true</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_launcher_foreground</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>

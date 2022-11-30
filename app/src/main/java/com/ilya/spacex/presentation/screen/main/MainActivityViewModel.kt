@@ -31,9 +31,11 @@ class MainActivityViewModel() : ViewModel() {
     }
 
     private fun loadRocketInfo() {
+        _isLoading.value = true
         viewModelScope.launch {
             _rockets.value = loadRocketInfoUseCase()
             withContext(Dispatchers.Main) {
+                _isLoading.value = false
             }
         }
     }
