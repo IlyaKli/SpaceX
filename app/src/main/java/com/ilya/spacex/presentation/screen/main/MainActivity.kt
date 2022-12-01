@@ -1,10 +1,8 @@
 package com.ilya.spacex.presentation.screen.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.core.view.isVisible
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.ilya.spacex.R
 import com.ilya.spacex.databinding.ActivityMainBinding
@@ -20,21 +18,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        viewModel.isLoading.observe(this) {
-            if (it == false) {
-                binding.mainViewPager.visibility = View.VISIBLE
-                Log.d("loadRockets", "visible")
-                setTheme(R.style.Theme_SpaceX)
-            }
-        }
         binding.mainViewPager.adapter = adapter
+        binding.mainViewPager.offscreenPageLimit = 4
         viewModel.rockets.observe(this) {
-            Log.d("loadRockets", "load")
             adapter.rockets = it
         }
-        viewModel.isLoading.observe(this) {
+        adapter.loadingImageListener = {
+            binding.mainViewPager.visibility = View.VISIBLE
+            setTheme(R.style.Theme_SpaceX)
         }
-
     }
 }
 
