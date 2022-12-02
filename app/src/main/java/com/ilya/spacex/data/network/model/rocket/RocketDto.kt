@@ -3,6 +3,9 @@ package com.ilya.spacex.data.network.model.rocket
 import com.google.gson.annotations.SerializedName
 
 data class RocketDto(
+    @SerializedName("id")
+    val id: String,
+
     @SerializedName("name")
     val name: String,
 

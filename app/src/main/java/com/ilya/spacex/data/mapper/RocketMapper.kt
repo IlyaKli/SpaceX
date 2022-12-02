@@ -22,7 +22,8 @@ class RocketMapper {
         costLaunch = dto.costLaunch,
         firstStage = mapRocketFirstStageDtoToEntity(dto.firstStage),
         secondStage = mapRocketSecondStageDtoToEntity(dto.secondStage),
-        rocketImages = dto.rocketImages
+        rocketImages = dto.rocketImages,
+        id = dto.id
     )
 
     private fun mapRocketHeightDtoToEntity(dto: RocketHeightDto) = RocketHeight(

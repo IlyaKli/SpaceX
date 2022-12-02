@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            tools:src="@drawable/ic_launcher_background" />
+            tools:src="@mipmap/ic_launcher_rocket" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -457,6 +457,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/launchButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="30dp"

@@ -1,12 +1,14 @@
 package com.ilya.spacex.presentation.screen.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.ilya.spacex.R
 import com.ilya.spacex.databinding.ActivityMainBinding
 import com.ilya.spacex.presentation.adapter.RocketViewPagerAdapter
+import com.ilya.spacex.presentation.screen.launch.LaunchActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         adapter.loadingImageListener = {
             binding.mainViewPager.visibility = View.VISIBLE
             setTheme(R.style.Theme_SpaceX)
+        }
+        adapter.clickListener = {
+            startActivity(LaunchActivity.newIntent(it.id, it.name, this))
+        }
+        viewModel.launches.observe(this) {
+            Log.d("launchesLoad", it.toString())
         }
     }
 }

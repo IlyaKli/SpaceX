@@ -18,6 +18,8 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
 
     var loadingImageListener: (() -> Unit)? = null
 
+    var clickListener: ((rocket: Rocket) -> Unit)? = null
+
     var rockets = listOf<Rocket>()
         set(value) {
             field = value
@@ -79,6 +81,9 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
                 fuelCountSecondTextView.text = secondStage.fuelAmount.toString()
                 burnTimeSecondTextView.text = secondStage.burnTime.toString()
             }
+        }
+        holder.binding.launchButton.setOnClickListener {
+            clickListener?.invoke(rocket)
         }
     }
 

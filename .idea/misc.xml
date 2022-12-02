@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.168" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable-v24/ic_rocket.xml" value="0.269" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable/ic_launcher_background.xml" value="0.168" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable/ic_launcher_rocket_foreground.xml" value="0.1695" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable/ic_rocket_svgrepo_com.xml" value="0.269" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable/rocket_back.xml" value="0.1685" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/drawable/rocket_spalsh.xml" value="0.269" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/layout/activity_launch.xml" value="0.33177083333333335" />
         <entry key="..\:/Android/SpaceX/app/src/main/res/layout/activity_main.xml" value="0.33177083333333335" />
-        <entry key="..\:/Android/SpaceX/app/src/main/res/layout/rocket_item.xml" value="0.3307291666666667" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/layout/launch_item.xml" value="0.44670991658943465" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/layout/rocket_background.xml" value="0.3307291666666667" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/layout/rocket_item.xml" value="0.3018292682926829" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/mipmap-anydpi-v26/ic_launcher_rocket.xml" value="0.168" />
+        <entry key="..\:/Android/SpaceX/app/src/main/res/mipmap-anydpi-v26/ic_launcher_rocket_round.xml" value="0.168" />
       </map>
     </option>
   </component>
