@@ -64,9 +64,9 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
                     .into(holder.binding.rocketImageView)
                 rocketNameTextView.text = name
                 rocketHeightValueTextView.text = height.meters.toString()
-                rocketHeightTextView.text = String.format(context.getString(R.string.rocket_height), "m")
+                rocketHeightTextView.text = String.format(context.getString(R.string.rocket_height), "м")
                 rocketDiameterValueTextView.text = diameter.meters.toString()
-                rocketDiameterTextView.text = String.format(context.getString(R.string.rocket_diameter), "m")
+                rocketDiameterTextView.text = String.format(context.getString(R.string.rocket_diameter), "м")
                 rocketMassValueTextView.text = mass.kilograms.toString()
                 rocketMassTextView.text = String.format(context.getString(R.string.rocket_weight), "кг")
                 rocketPayloadValueTextView.text = payloadWeight[0].kilograms.toString()
