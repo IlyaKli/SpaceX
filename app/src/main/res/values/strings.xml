@@ -13,4 +13,14 @@
     <string name="burn_time">Время сгорания</string>
     <string name="rocket_second_stage">Вторая ступень</string>
     <string name="watch_rocket_launches">Посмотреть запуски</string>
+    <string name="height">Высота</string>
+    <string name="diameter">Диаметр</string>
+    <string name="mass">Масса</string>
+    <string name="load">Полезная нагрузка</string>
+    <string name="settings">Настройки</string>
+    <string name="сдщыу">Закрыть</string>
+    <string name="kg">kg</string>
+    <string name="lb">lb</string>
+    <string name="m">m</string>
+    <string name="ft">ft</string>
 </resources>

@@ -18,7 +18,9 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
 
     var loadingImageListener: (() -> Unit)? = null
 
-    var clickListener: ((rocket: Rocket) -> Unit)? = null
+    var launchClickListener: ((rocket: Rocket) -> Unit)? = null
+
+    var settingClickListener: (() -> Unit)? = null
 
     var rockets = listOf<Rocket>()
         set(value) {
@@ -82,8 +84,11 @@ class RocketViewPagerAdapter(private val context: Context) : RecyclerView.Adapte
                 burnTimeSecondTextView.text = secondStage.burnTime.toString()
             }
         }
+        holder.binding.settingsImageView.setOnClickListener {
+            settingClickListener?.invoke()
+        }
         holder.binding.launchButton.setOnClickListener {
-            clickListener?.invoke(rocket)
+            launchClickListener?.invoke(rocket)
         }
     }
 

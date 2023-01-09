@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.ilya.spacex.R
 import com.ilya.spacex.databinding.ActivityMainBinding
 import com.ilya.spacex.presentation.adapter.RocketViewPagerAdapter
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private val adapter by lazy { RocketViewPagerAdapter(this)}
     private val viewModel by lazy { ViewModelProvider(this)[MainActivityViewModel::class.java] }
+    private val bottomSheet by lazy { BottomSheetBehavior.from(binding.bottomSheet) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,11 +31,15 @@ class MainActivity : AppCompatActivity() {
             binding.mainViewPager.visibility = View.VISIBLE
             setTheme(R.style.Theme_SpaceX)
         }
-        adapter.clickListener = {
-            startActivity(LaunchActivity.newIntent(it.id, it.name, this))
+        bottomSheet.state = BottomSheetBehavior.STATE_HIDDEN
+        adapter.settingClickListener = {
+            bottomSheet.state = BottomSheetBehavior.STATE_EXPANDED
         }
-        viewModel.launches.observe(this) {
-            Log.d("launchesLoad", it.toString())
+        binding.closeTextView.setOnClickListener {
+            bottomSheet.state = BottomSheetBehavior.STATE_HIDDEN
+        }
+        adapter.launchClickListener = {
+            startActivity(LaunchActivity.newIntent(it.id, it.name, this))
         }
     }
 }
